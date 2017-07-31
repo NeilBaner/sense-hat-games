@@ -11,7 +11,7 @@ from random import randint
 
 sense = SenseHat()
 
-# All the variables used in this project:
+# All the variables used in this program:
 
 score = 0
 # The player's score. Gets increased by 1 every time the player successfully
