@@ -144,9 +144,9 @@ while True:
 	# snake is eating itself), the code inside is contained in an if, which evaluates
 	# to false once it is determined that the snake has eaten itself.
         if not end:
-            if snake_pos[0] == snake_pos[2*i] and snake_pos[1] == snake_pos[2*i+1]:
             # Checks if the snake's head is in the same position as this segment (in this iteration)
-            sense.show_message("You scored " + str(score))
+            if snake_pos[0] == snake_pos[2*i] and snake_pos[1] == snake_pos[2*i+1]:
+                sense.show_message("You scored " + str(score))
 		# Shows the score         
                 score = 0
                 speed = 0.50
