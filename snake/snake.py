@@ -93,15 +93,12 @@ def draw_snake(t):
         if i==0:
 	    # Draw the snake head as a bright blue
             sense.set_pixel(snake_pos[2*(i)], snake_pos[2*(i)+1], 0, 255, 255)
-        elif i==1:
-	    # Draw the first segment as a slightly darker blue
+        elif i == 1:
+	    # Draw the first segment as a darker blue
             sense.set_pixel(snake_pos[2*(i)], snake_pos[2*(i)+1], 0, 127, 255)
-        elif i%2 == 0:
-	    # Draw all even-numbered segments as an even darker blue
-            sense.set_pixel(snake_pos[2*(i)], snake_pos[2*(i)+1], 0, 63, 127)
         else:
-	    # Draw all odd-numbered segments as the darkest blue
-            sense.set_pixel(snake_pos[2*(i)], snake_pos[2*(i)+1], 0, 0, 63)
+	    # Draw all remaining segments as the darkest blue
+            sense.set_pixel(snake_pos[2*(i)], snake_pos[2*(i)+1], 0, 0, 255)
 
 # Functions to change the direction of the snake
 def move_up():
