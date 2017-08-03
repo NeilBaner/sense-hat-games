@@ -1,4 +1,3 @@
-
 # All the necessary imports - the Sense HAT libraries, the time module 
 # (for the sleep function, to add pauses and control the speed of the game)
 # and the random module for the randint function (to randomise the apple
@@ -145,8 +144,7 @@ while True:
         # Because this loop runs as many times as the snake has segments (to check if the
 	# snake is eating itself), the code inside is contained in an if, which evaluates
 	# to false once it is determined that the snake has eaten itself.
-
-	if not end:
+        if not end:
             if snake_pos[0] == snake_pos[2*i] and snake_pos[1] == snake_pos[2*i+1]:
             # Checks if the snake's head is in the same position as this segment (in this iteration)
 		sense.show_message("You scored " + str(score))
