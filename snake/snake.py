@@ -96,7 +96,6 @@ def draw_snake(t):
         elif i==1:
 	    # Draw the first segment as a slightly darker blue
             sense.set_pixel(snake_pos[2*(i)], snake_pos[2*(i)+1], 0, 127, 255)
-
         elif i%2 == 0:
 	    # Draw all even-numbered segments as an even darker blue
             sense.set_pixel(snake_pos[2*(i)], snake_pos[2*(i)+1], 0, 63, 127)
@@ -147,21 +146,18 @@ while True:
         if not end:
             if snake_pos[0] == snake_pos[2*i] and snake_pos[1] == snake_pos[2*i+1]:
             # Checks if the snake's head is in the same position as this segment (in this iteration)
-		sense.show_message("You scored " + str(score))
+            sense.show_message("You scored " + str(score))
 		# Shows the score         
-   
                 score = 0
                 speed = 0.50
                 snake_pos = [4, 3, 4, 4, 4, 5, 4, 6]
                 apple_pos = [randint(0, 7), randint(0, 7)]
                 snake_dir = 1
 		# Resets the game variables
-
                 end = True
-
     draw_apple()
     # Draws the apple
-
+    
     if apple_pos[0]==snake_pos[0] and apple_pos[1] == snake_pos[1]:
     # Checks if the snake head is in the same place as the apple (apple is eaten)
         draw_snake(1)
